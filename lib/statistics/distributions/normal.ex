@@ -64,7 +64,7 @@ defmodule Statistics.Distributions.Normal do
   @spec cdf(number, number) :: fun
   def cdf(mu, sigma) do
     fn x ->
-      0.5 * (1.0 + Functions.erf((x - mu) / (sigma * Math.sqrt(2))))
+      0.5 * (1.0 + :math.erf((x - mu) / (sigma * Math.sqrt(2))))
     end
   end
 
